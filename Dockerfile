@@ -41,11 +41,14 @@ RUN curl -s -L https://bootstrap.pypa.io/get-pip.py > get-pip.py
 RUN python3 get-pip.py
 RUN rm get-pip.py
 
+# Upgrade pip
+RUN pip install --upgrade pip
 
 # Install numpy
 RUN pip install -v numpy
 
 # Install gunicorn
+RUN echo "Installing gunicorn!!!"
 RUN pip install -v gunicorn
 
 # Install ATLAS library and fortran compiler
