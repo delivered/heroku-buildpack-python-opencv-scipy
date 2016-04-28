@@ -45,6 +45,8 @@ RUN rm get-pip.py
 # Install numpy
 RUN pip install -v numpy
 
+# Install gunicorn
+RUN pip install -v gunicorn
 
 # Install ATLAS library and fortran compiler
 RUN curl -s -L https://db.tt/osV4nSh0 > npscipy.tar.gz
